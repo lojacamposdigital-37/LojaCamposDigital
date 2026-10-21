@@ -7,9 +7,29 @@
   <meta name="description" content="Loja Campos Digital — o shopping na sua mão. Encontre ofertas em diversas categorias.">
   <title>Loja Campos Digital | O Shopping na Sua Mão!</title>
   
-  <!-- Favicon ADICIONADO AQUI -->
   <link rel="icon" type="image/png" href="Logomarca.png">
-  <!-- -------------------- -->
+
+  <!-- ============================================================ -->
+  <!-- ✅ PIXEL DA META - INÍCIO (deve ficar no <head>) -->
+  <!-- ============================================================ -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1303694412837825');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1303694412837825&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- ============================================================ -->
+  <!-- ✅ PIXEL DA META - FIM -->
+  <!-- ============================================================ -->
 
   <style>
     :root {
@@ -70,7 +90,6 @@
       object-fit: contain; object-position: center; margin: 0 auto;
     }
 
-    /* --- BOTÃO PRINCIPAL (Kit Panelas) --- */
     .primary-action {
       display: block; 
       width: min(92%, 1000px); 
@@ -131,7 +150,6 @@
       border-radius: var(--radius); padding: 26px 24px 28px;
     }
 
-    /* --- BANNER AZUL PROPORCIONAL --- */
     .categories-panel h2 {
       text-align: center; 
       font-size: clamp(1.35rem, 3vw, 2rem);
@@ -169,7 +187,6 @@
     .category:hover .category-circle { transform: scale(1.035); outline-color: #aabaff; }
     .category-circle img { width: 100%; height: 100%; object-fit: contain; padding: 8px; }
 
-    /* --- BOTÃO VER TODOS --- */
     .all-button {
       display: block; 
       margin: 30px auto 0; 
@@ -345,5 +362,22 @@
       link.setAttribute('rel', 'noopener noreferrer');
     });
   </script>
+
+  <!-- ============================================================ -->
+  <!-- ✅ RASTREAMENTO DE CLIQUE NO BOTÃO - INÍCIO -->
+  <!-- ============================================================ -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var botaoKitPanelas = document.querySelector('.primary-action');
+      if (botaoKitPanelas) {
+        botaoKitPanelas.addEventListener('click', function() {
+          fbq('track', 'Lead');
+        });
+      }
+    });
+  </script>
+  <!-- ============================================================ -->
+  <!-- ✅ RASTREAMENTO DE CLIQUE NO BOTÃO - FIM -->
+  <!-- ============================================================ -->
 </body>
 </html>
