@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#08091b">
+  <meta name="description" content="Loja Campos Digital — o shopping na sua mão. Encontre ofertas em diversas categorias.">
+  <title>Loja Campos Digital | O Shopping na Sua Mão!</title>
+  <style>
+    :root {
+      --navy: #050617;
+      --blue: #2025b6;
+      --blue-dark: #10147f;
+      --page: #ededed;
+      --text: #151515;
+      --muted: #555;
+      --white: #fff;
+      --radius: 26px;
+      --shadow: 0 3px 9px rgba(0,0,0,.18);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0; background: var(--page); color: var(--text);
+      font-family: Arial, Helvetica, sans-serif; line-height: 1.45;
+    }
+    a { color: inherit; }
+    .site-header {
+      display: grid; grid-template-columns: 150px minmax(0,1fr);
+      min-height: 142px; background: var(--navy); color: white;
+      align-items: stretch; overflow: hidden;
+    }
+    .brand {
+      display: flex; align-items: center; justify-content: center;
+      padding: 14px; text-decoration: none; text-align: center;
+      border-right: 1px solid rgba(255,255,255,.08);
+    }
+    .brand-mark {
+      width: 104px; height: 104px; 
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center; color: white;
+    }
+    .brand-mark img {
+      width: 100%; height: 100%; object-fit: contain; border-radius: 50%;
+    }
+    .brand-mark .script { font-family: Georgia, serif; font-style: italic; font-size: 16px; }
+    .brand-mark strong { font-size: 16px; letter-spacing: -.7px; }
+    .brand-mark small { font-size: 9px; letter-spacing: 2px; }
+    .hero-title {
+      min-width: 0; display: flex; justify-content: center; align-items: center;
+      padding: 18px 24px; text-align: center;
+      background:
+        radial-gradient(ellipse at 70% 30%, rgba(0,117,255,.45), transparent 35%),
+        repeating-radial-gradient(ellipse at 65% 20%, transparent 0 25px, rgba(0,145,255,.6) 27px 29px, transparent 31px 48px),
+        #030412;
+    }
+    .hero-title h1 {
+      margin: 0; font-family: Georgia, 'Times New Roman', serif;
+      font-style: italic; font-weight: 700; font-size: clamp(1.8rem, 4.5vw, 3.35rem);
+      line-height: 1.05; color: #f6f3ed; text-shadow: 2px 3px 2px #000;
+    }
+    .main-image-link { display: block; line-height: 0; background: #ddd; }
+    .main-image {
+      display: block; width: 100%; height: auto; max-height: 760px;
+      object-fit: contain; object-position: center; margin: 0 auto;
+    }
+
+    /* --- BOTÃO PRINCIPAL (Kit Panelas) --- */
+    .primary-action {
+      display: block; 
+      width: min(92%, 1000px); 
+      margin: 28px auto 30px;
+      background: linear-gradient(180deg, #3b4bff 0%, #10147f 100%); 
+      color: #fff; 
+      border: 4px solid #ffffff; 
+      border-radius: 999px; 
+      text-align: center; 
+      text-decoration: none;
+      font-size: 18px; 
+      font-weight: 900; 
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      padding: 16px 18px;
+      transition: all .2s ease;
+      position: relative;
+      z-index: 1;
+      box-shadow: 
+        0 0 20px rgba(100, 150, 255, 0.9),
+        0 0 40px rgba(32, 37, 182, 0.8),
+        inset 0 0 20px rgba(255, 255, 255, 0.7),
+        0 8px 20px rgba(0,0,0,0.4);
+      text-shadow: 0 2px 5px rgba(0,0,0,0.6);
+      animation: pulseGlow 1.5s infinite alternate;
+    }
+
+    @keyframes pulseGlow {
+      0% { 
+        box-shadow: 
+          0 0 15px rgba(100, 150, 255, 0.7), 
+          0 0 30px rgba(32, 37, 182, 0.5), 
+          inset 0 0 10px rgba(255, 255, 255, 0.4), 
+          0 8px 20px rgba(0,0,0,0.4); 
+      }
+      100% { 
+        box-shadow: 
+          0 0 30px rgba(100, 150, 255, 1), 
+          0 0 60px rgba(32, 37, 182, 0.9), 
+          inset 0 0 25px rgba(255, 255, 255, 0.9), 
+          0 8px 20px rgba(0,0,0,0.4); 
+      }
+    }
+
+    .primary-action:hover { 
+      background: linear-gradient(180deg, #5c6cff 0%, #2025b6 100%); 
+      transform: scale(1.03); 
+      animation: none; 
+      box-shadow: 
+        0 0 40px rgba(150, 180, 255, 1), 
+        0 0 80px rgba(32, 37, 182, 1), 
+        inset 0 0 30px rgba(255, 255, 255, 1), 
+        0 8px 20px rgba(0,0,0,0.4);
+    }
+
+    .categories-panel {
+      width: min(92%, 1120px); margin: 0 auto; background: white;
+      border-radius: var(--radius); padding: 26px 24px 28px;
+    }
+
+    /* --- BANNER AZUL PROPORCIONAL --- */
+    .categories-panel h2 {
+      text-align: center; 
+      font-size: clamp(1.35rem, 3vw, 2rem);
+      line-height: 1.1; 
+      margin: 0 auto 28px; /* O 'auto' centraliza o banner */
+      font-weight: 900;
+      /* Estilo de Banner */
+      background: linear-gradient(135deg, #050617 0%, #2025b6 50%, #10147f 100%);
+      color: #ffffff;
+      padding: 18px 20px;
+      border-radius: 16px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25), inset 0 0 10px rgba(255,255,255,0.2);
+      text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+      width: 100%; /* Ocupa toda a largura do painel branco */
+      max-width: 1000px; /* Limita um pouco para não colar nas bordas em telas gigantes */
+      border: 2px solid #3b4bff;
+    }
+    /* ----------------------------------------------- */
+
+    .category-grid {
+      display: grid; grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 26px 16px;
+    }
+    .category {
+      min-width: 0; text-align: center; text-decoration: none;
+      display: flex; flex-direction: column; align-items: center; gap: 10px;
+      font-weight: 800; font-size: clamp(.85rem, 1.5vw, 1rem);
+    }
+    .category-circle {
+      width: min(100%, 170px); aspect-ratio: 1 / 1; border-radius: 50%;
+      border: 2px solid #252525; outline: 5px solid #dedede;
+      background: linear-gradient(145deg,#f8f8f8,#d4d4d4);
+      display: flex; align-items: center; justify-content: center;
+      font-size: clamp(2.2rem, 5vw, 4.1rem);
+      overflow: hidden; transition: transform .18s, outline-color .18s;
+    }
+    .category:hover .category-circle { transform: scale(1.035); outline-color: #aabaff; }
+    .category-circle img { width: 100%; height: 100%; object-fit: contain; padding: 8px; }
+
+    /* --- BOTÃO VER TODOS --- */
+    .all-button {
+      display: block; 
+      margin: 30px auto 0; 
+      width: 100%;
+      padding: 14px 16px; 
+      border: 3px solid #ffffff;
+      border-radius: 999px;
+      color: #fff; 
+      background: linear-gradient(180deg, #2025b6 0%, #080a3d 100%);
+      text-align: center;
+      text-decoration: none; 
+      font-size: 15px; 
+      font-weight: 900; 
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.6);
+      transition: all .2s ease;
+      box-shadow: 
+        0 0 15px rgba(32, 37, 182, 0.9), 
+        0 0 30px rgba(32, 37, 182, 0.6), 
+        inset 0 0 15px rgba(255, 255, 255, 0.5),
+        0 5px 15px rgba(0,0,0,0.3);
+      animation: pulseGlowAll 1.5s infinite alternate;
+    }
+
+    @keyframes pulseGlowAll {
+      0% { 
+        box-shadow: 
+          0 0 10px rgba(32, 37, 182, 0.7), 
+          0 0 20px rgba(32, 37, 182, 0.4), 
+          inset 0 0 8px rgba(255, 255, 255, 0.3), 
+          0 5px 15px rgba(0,0,0,0.3); 
+      }
+      100% { 
+        box-shadow: 
+          0 0 25px rgba(32, 37, 182, 1), 
+          0 0 50px rgba(32, 37, 182, 0.8), 
+          inset 0 0 20px rgba(255, 255, 255, 0.8), 
+          0 5px 15px rgba(0,0,0,0.3); 
+      }
+    }
+
+    .all-button:hover { 
+      background: linear-gradient(180deg, #3b4bff 0%, #10147f 100%); 
+      transform: scale(1.02);
+      animation: none;
+      box-shadow: 
+        0 0 30px rgba(100, 150, 255, 1), 
+        0 0 60px rgba(32, 37, 182, 1), 
+        inset 0 0 25px rgba(255, 255, 255, 0.9);
+    }
+
+    .about {
+      max-width: 980px; margin: 64px auto 22px; padding: 0 20px;
+      text-align: center; color: #333; font-size: 14px;
+    }
+    .credit { font-size: 12px; color: #555; margin-bottom: 16px; }
+    .about p { margin: 0 0 10px; }
+    .audio-placeholder {
+      display: block; width: min(94%, 850px); margin: 20px auto 24px;
+      font-size: 13px; color: #555; text-align: center;
+    }
+    .social-link {
+      display: flex; align-items: center; justify-content: center;
+      width: min(82%, 760px); min-height: 105px; margin: 18px auto;
+      border-radius: 40px; color: white; text-decoration: none; font-weight: 700;
+      box-shadow: 0 2px 6px rgba(0,0,0,.12);
+    }
+    .instagram {
+      background: linear-gradient(35deg,#ffb52f 0%,#ff2c82 45%,#b51fe1 70%,#304dff 100%);
+      font-family: Georgia, serif; font-size: clamp(2rem, 6vw, 4.2rem);
+      font-style: italic; letter-spacing: -2px;
+    }
+    .instagram .camera { font-family: Arial,sans-serif; font-size: 1.05em; margin-right: 15px; font-style: normal; }
+    .whatsapp {
+      min-height: 48px; width: min(90%, 850px); border: 2px solid white;
+      outline: 1px solid #b8b8b8; border-radius: 999px; background: #00c83b;
+      font-size: 14px; box-shadow: var(--shadow);
+    }
+    .bottom-space { width: min(90%, 850px); height: 32px; margin: 16px auto 30px; border: 1px dashed #bbb; }
+    footer { padding-bottom: 1px; }
+    @media (min-width: 1000px) {
+      .main-image { max-height: 850px; }
+      .site-header { grid-template-columns: 180px minmax(0,1fr); }
+      .brand-mark { width: 118px; height: 118px; }
+    }
+    @media (max-width: 650px) {
+      .site-header { grid-template-columns: 94px minmax(0,1fr); min-height: 94px; }
+      .brand { padding: 7px; }
+      .brand-mark { width: 76px; height: 76px; }
+      .brand-mark .script { font-size: 12px; }
+      .brand-mark strong { font-size: 11px; }
+      .brand-mark small { font-size: 7px; letter-spacing: 1.4px; }
+      .hero-title { padding: 12px 9px; }
+      .hero-title h1 { font-size: clamp(1.25rem, 5vw, 2rem); }
+      .primary-action { margin: 18px auto 22px; padding: 14px 8px; font-size: 16px; letter-spacing: 1px; }
+      .categories-panel { width: 92%; padding: 22px 14px 20px; border-radius: 24px; }
+      .categories-panel h2 { margin-bottom: 24px; font-size: 1.25rem; padding: 15px 10px; }
+      .category-grid { grid-template-columns: repeat(2, minmax(0,1fr)); gap: 25px 12px; }
+      .category-circle { width: min(82%, 150px); outline-width: 4px; font-size: 3rem; }
+      .category { font-size: .92rem; gap: 9px; }
+      .all-button { margin-top: 26px; font-size: 14px; padding: 12px 10px; }
+      .about { margin-top: 48px; font-size: 12px; padding: 0 18px; }
+      .social-link { min-height: 84px; border-radius: 28px; }
+      .instagram { font-size: clamp(1.8rem, 8vw, 3rem); letter-spacing: -1px; }
+      .instagram .camera { margin-right: 8px; }
+      .whatsapp { min-height: 43px; font-size: 12px; }
+    }
+    @media (max-width: 360px) {
+      .site-header { grid-template-columns: 78px minmax(0,1fr); }
+      .brand-mark { width: 64px; height: 64px; }
+      .hero-title h1 { font-size: 1.15rem; }
+      .categories-panel { width: 94%; padding-left: 10px; padding-right: 10px; }
+      .category { font-size: .82rem; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="Loja Campos Digital - início">
+      <span class="brand-mark"><img src="Logomarca.png" alt="Logo Loja Campos Digital"></span>
+    </a>
+    <div class="hero-title"><h1>O Shopping na Sua Mão!</h1></div>
+  </header>
+
+  <main>
+    <a class="main-image-link" href="https://s.shopee.com.br/4qGQts9W9M" target="_blank" rel="noopener noreferrer" aria-label="Adquirir kit de panelas na Shopee">
+      <img class="main-image" src="Banner-panelas.jpg" alt="Influencer da Loja Campos Digital apresentando um kit de panelas">
+    </a>
+    
+    <a class="primary-action" href="https://s.shopee.com.br/4qGQts9W9M" target="_blank" rel="noopener noreferrer">ADQUIRIR KIT PANELAS</a>
+
+    <section class="categories-panel" id="categorias" aria-labelledby="categories-title">
+      
+      <!-- TÍTULO COM ESTILO DE BANNER PROPORCIONAL -->
+      <h2 id="categories-title">MAIS PRODUTOS?<br>CLIQUE NA IMAGEM!</h2>
+
+      <div class="category-grid">
+        <a class="category" href="https://s.shopee.com.br/3qNtxpZpl1" target="_blank" rel="noopener noreferrer"><span class="category-circle"><img src="Tvs.png" alt="TV"></span><span>TV</span></a>
+        <a class="category" href="https://s.shopee.com.br/50ZrLk1uyI" target="_blank" rel="noopener noreferrer"><span class="category-circle"><img src="Smartphones.png" alt="Smartphones"></span><span>Smartphones</span></a>
+        <a class="category" href="https://s.shopee.com.br/7pu2j7i9PA" target="_blank" rel="noopener noreferrer"><span class="category-circle"><img src="Rablets.png" alt="Tablets"></span><span>Tablets</span></a>
+        <a class="category" href="https://s.shopee.com.br/5VW7wRRfTI" target="_blank" rel="noopener noreferrer"><span class="category-circle"><img src="Som.png" alt="Som"></span><span>Som</span></a>
+        <a class="category" href="https://s.shopee.com.br/8KqKew31k5" target="_blank" rel="noopener noreferrer"><span class="category-circle"><img src="Moda Infantil.png" alt="Moda Infantil"></span><span>Moda Infantil</span></a>
+        <a class="category" href="https://s.shopee.com.br/AKbP2iSBfr" target="_blank" rel="noopener noreferrer"><span class="category-circle"><img src="Moda Masculina.png" alt="Moda Masculina"></span><span>Moda Masculina</span></a>
+        <a class="category" href="https://s.shopee.com.br/4LKBtkVoZv" target="_blank" rel="noopener noreferrer"><span class="category-circle"><img src="Moda Feminina.png" alt="Moda Feminina"></span><span>Moda Feminina</span></a>
+        <a class="category" href="https://s.shopee.com.br/8pmbG73SYZ" target="_blank" rel="noopener noreferrer"><span class="category-circle"><img src="Calçados.png" alt="Calçado"></span><span>Calçado</span></a>
+        <a class="category" href="https://s.shopee.com.br/6L5GHcWYK7" target="_blank" rel="noopener noreferrer"><span class="category-circle"><img src="Smartwatchs.png" alt="Smartwatches"></span><span>Smartwatches</span></a>
+        <a class="category" href="https://s.shopee.com.br/BUcwLJLul" target="_blank" rel="noopener noreferrer"><span class="category-circle"><img src="Drones.png" alt="Drones"></span><span>Drones</span></a>
+        <a class="category" href="https://s.shopee.com.br/7fadsCB79z" target="_blank" rel="noopener noreferrer"><span class="category-circle"><img src="Notebooks.png" alt="Notebooks"></span><span>Notebooks</span></a>
+        <a class="category" href="https://s.shopee.com.br/BUcwUBB8d" target="_blank" rel="noopener noreferrer"><span class="category-circle"><img src="Fones.png" alt="Fones de ouvido"></span><span>Fones de ouvido</span></a>
+      </div>
+      
+      <a class="all-button" href="https://s.shopee.com.br/4Vdc6VFXPB" target="_blank" rel="noopener noreferrer">VER TODOS</a>
+    </section>
+
+    <section class="about" aria-label="Sobre a loja">
+      <div class="credit">Criado por @Marcio_Campos.Ads</div>
+      <p>Bem-vindo à <strong>Loja Campos Digital!</strong> Para garantir a você a melhor experiência de compra, nós operamos como uma <strong>Loja Parceira</strong> das maiores plataformas de e-commerce do Brasil.</p>
+      <p>Isso significa que o nosso trabalho é <strong>garimpar e indicar as melhores ofertas</strong> do mercado para facilitar a sua escolha. Quando clica nos botões, você será direcionado para os sites da <strong>Shopee ou da Magalu</strong>. Todo o processo de separação, faturamento e entrega é realizado com a segurança e a garantia oficial da Shopee ou da Magalu. Compre com total tranquilidade e receba direto na sua casa!</p>
+    </section>
+
+    <div class="audio-placeholder">Espaço reservado para o áudio/vídeo institucional (arquivo ainda não enviado).</div>
+
+    <a class="social-link instagram" href="#" aria-label="Instagram da Loja Campos Digital" target="_blank" rel="noopener noreferrer">
+      <span class="camera" aria-hidden="true">◎</span><span>Instagram</span>
+    </a>
+    
+    <a class="social-link whatsapp" href="#" aria-label="Atendimento pelo WhatsApp">ATENDIMENTO WHATSAPP</a>
+    <div class="bottom-space" aria-hidden="true"></div>
+  </main>
+
+  <script>
+    document.querySelectorAll('a[target="_blank"]').forEach(link => {
+      link.setAttribute('rel', 'noopener noreferrer');
+    });
+  </script>
+</body>
+</html>

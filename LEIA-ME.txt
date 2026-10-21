@@ -1,0 +1,14 @@
+LOJA CAMPOS DIGITAL — SITE HTML
+
+Arquivos:
+- index.html: página principal responsiva.
+- assets/banner-panelas.jpg: imagem principal enviada.
+
+IMPORTANTE ANTES DE PUBLICAR:
+1. Envie/substitua as imagens individuais das categorias para que possamos trocar os ícones temporários pelas imagens finais.
+2. Configure o link real do Instagram no botão correspondente.
+3. Configure o WhatsApp usando o formato https://wa.me/55DDDNUMERO.
+4. Envie o áudio/vídeo institucional, caso queira incluir o player do print.
+5. Envie o banner do cabeçalho e a logo original se quiser usar os arquivos reais em vez do logotipo provisório feito em CSS.
+
+Os links de afiliado da Shopee fornecidos foram associados aos botões/categorias correspondentes.
