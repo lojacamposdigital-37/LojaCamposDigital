@@ -138,21 +138,22 @@
       flex-direction: column;
     }
 
-    /* Banner animado (Letreiro) */
+    /* Banner animado (Letreiro) AGORA PRETO COM LETRAS BRANCAS */
     .promo-banner {
-      background: #ffd5b5;
+      background: #000000; /* Fundo Preto */
       display: flex;
       align-items: center;
       justify-content: space-between;
       padding: 8px 15px;
       font-weight: 700;
       font-size: 13px;
-      color: #333;
+      color: #ffffff; /* Texto Branco */
       overflow: hidden;
       position: relative;
+      border-bottom: 1px solid #333; /* Linha sutil para separar da imagem */
     }
     .promo-banner .arrow {
-      color: #d32f2f;
+      color: #ffffff; /* Setas brancas */
       font-size: 16px;
       font-weight: bold;
     }
@@ -403,15 +404,14 @@
       
       .product-card { margin-top: -10px; margin-bottom: 30px; }
       
-      /* --- AJUSTE DA IMAGEM NO CELULAR --- */
       .product-image-wrapper { 
-        padding: 10px; /* Reduz o espaçamento interno */
+        padding: 10px;
       }
       .product-image-wrapper img { 
-        max-height: none; /* Remove a limitação de altura */
-        width: 100%;      /* Faz a imagem ocupar toda a largura do card */
-        height: auto;     /* Mantém a proporção */
-        transform: scale(1.05); /* Dá um leve zoom para preencher melhor o espaço */
+        max-height: none;
+        width: 100%;      
+        height: auto;     
+        transform: scale(1.05); 
       }
       
       .product-title { font-size: 16px; }
@@ -460,14 +460,14 @@
     <!-- ========================================== -->
     <div class="product-card">
       
-      <!-- Letreiro Animado -->
+      <!-- Letreiro Animado (PRETO) -->
       <div class="promo-banner">
         <span class="arrow">&lt;</span>
         <div class="promo-text-container">
           <div class="promo-text-slider">
-            <span>Frete Grátis com Cupom</span>
-            <span>Grande Oferta</span>
-            <span>Kit Panelas</span>
+            <span>FRETE GRÁTIS COM CUPOM</span>
+            <span>GRANDE OFERTA</span>
+            <span>KIT PANELAS</span>
           </div>
         </div>
         <span class="arrow">&gt;</span>
@@ -505,7 +505,7 @@
 
         <!-- BOTÃO ADICIONAR COM LINK CORRIGIDO -->
         <a class="add-to-cart-btn action-add" href="https://s.shopee.com.br/4qGQts9W9M" target="_blank" rel="noopener noreferrer">
-          🛒 ADQUIRIR COM CUPOM
+          🛒 Adicionar
         </a>
       </div>
     </div>
