@@ -204,7 +204,7 @@
     
     /* --- ESTILO DA OFERTA RELÂMPAGO --- */
     .flash-sale-title {
-      color: #d32f2f; /* Vermelho chamativo */
+      color: #d32f2f;
       font-size: 16px;
       font-weight: 900;
       text-transform: uppercase;
@@ -213,14 +213,13 @@
       display: flex;
       align-items: center;
       gap: 5px;
-      animation: pulseText 1s infinite alternate; /* Efeito piscando suave */
+      animation: pulseText 1s infinite alternate;
     }
 
     @keyframes pulseText {
       0% { opacity: 0.8; }
       100% { opacity: 1; text-shadow: 0 0 5px rgba(211, 47, 47, 0.4); }
     }
-    /* ---------------------------------- */
 
     .product-title {
       font-size: 18px;
@@ -403,7 +402,18 @@
       .primary-action { margin: 18px auto 22px; padding: 14px 8px; font-size: 16px; letter-spacing: 1px; }
       
       .product-card { margin-top: -10px; margin-bottom: 30px; }
-      .product-image-wrapper img { max-height: 250px; }
+      
+      /* --- AJUSTE DA IMAGEM NO CELULAR --- */
+      .product-image-wrapper { 
+        padding: 10px; /* Reduz o espaçamento interno */
+      }
+      .product-image-wrapper img { 
+        max-height: none; /* Remove a limitação de altura */
+        width: 100%;      /* Faz a imagem ocupar toda a largura do card */
+        height: auto;     /* Mantém a proporção */
+        transform: scale(1.05); /* Dá um leve zoom para preencher melhor o espaço */
+      }
+      
       .product-title { font-size: 16px; }
       .price-new { font-size: 24px; }
       .flash-sale-title { font-size: 14px; }
@@ -493,8 +503,8 @@
         </div>
         <div class="installments">ou R$ 259,99 sem cupom em outros métodos de pagamento</div>
 
-        <!-- BOTÃO ADICIONAR COM EFEITO METÁLICO -->
-        <a class="add-to-cart-btn action-add" href="#" target="_blank" rel="noopener noreferrer">
+        <!-- BOTÃO ADICIONAR COM LINK CORRIGIDO -->
+        <a class="add-to-cart-btn action-add" href="https://s.shopee.com.br/4qGQts9W9M" target="_blank" rel="noopener noreferrer">
           🛒 Adicionar
         </a>
       </div>
