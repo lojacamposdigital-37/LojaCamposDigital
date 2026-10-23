@@ -9,7 +9,9 @@
   
   <link rel="icon" type="image/png" href="Logomarca.png">
 
-  <!-- ✅ PIXEL DA META - INÍCIO -->
+  <!-- ============================================================ -->
+  <!-- ✅ PIXEL DA META - INÍCIO (deve ficar no <head>) -->
+  <!-- ============================================================ -->
   <script>
   !function(f,b,e,v,n,t,s)
   {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -25,7 +27,9 @@
   <noscript><img height="1" width="1" style="display:none"
   src="https://www.facebook.com/tr?id=1303694412837825&ev=PageView&noscript=1"
   /></noscript>
+  <!-- ============================================================ -->
   <!-- ✅ PIXEL DA META - FIM -->
+  <!-- ============================================================ -->
 
   <style>
     :root {
@@ -114,215 +118,32 @@
     }
 
     @keyframes pulseGlow {
-      0% { box-shadow: 0 0 15px rgba(100, 150, 255, 0.7), 0 0 30px rgba(32, 37, 182, 0.5), inset 0 0 10px rgba(255, 255, 255, 0.4), 0 8px 20px rgba(0,0,0,0.4); }
-      100% { box-shadow: 0 0 30px rgba(100, 150, 255, 1), 0 0 60px rgba(32, 37, 182, 0.9), inset 0 0 25px rgba(255, 255, 255, 0.9), 0 8px 20px rgba(0,0,0,0.4); }
+      0% { 
+        box-shadow: 
+          0 0 15px rgba(100, 150, 255, 0.7), 
+          0 0 30px rgba(32, 37, 182, 0.5), 
+          inset 0 0 10px rgba(255, 255, 255, 0.4), 
+          0 8px 20px rgba(0,0,0,0.4); 
+      }
+      100% { 
+        box-shadow: 
+          0 0 30px rgba(100, 150, 255, 1), 
+          0 0 60px rgba(32, 37, 182, 0.9), 
+          inset 0 0 25px rgba(255, 255, 255, 0.9), 
+          0 8px 20px rgba(0,0,0,0.4); 
+      }
     }
 
     .primary-action:hover { 
       background: linear-gradient(180deg, #5c6cff 0%, #2025b6 100%); 
       transform: scale(1.03); 
       animation: none; 
-      box-shadow: 0 0 40px rgba(150, 180, 255, 1), 0 0 80px rgba(32, 37, 182, 1), inset 0 0 30px rgba(255, 255, 255, 1), 0 8px 20px rgba(0,0,0,0.4);
-    }
-
-    /* --- INÍCIO DO CARD DE PRODUTO --- */
-    .product-card {
-      width: min(92%, 1000px);
-      margin: -10px auto 40px auto;
-      background: #fff;
-      border-radius: 16px;
-      border: 1px solid #e0e0e0;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.06);
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-    }
-
-    /* Banner animado (Letreiro) */
-    .promo-banner {
-      background: #ffd5b5;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 8px 15px;
-      font-weight: 700;
-      font-size: 13px;
-      color: #333;
-      overflow: hidden;
-      position: relative;
-    }
-    .promo-banner .arrow {
-      color: #d32f2f;
-      font-size: 16px;
-      font-weight: bold;
-    }
-    .promo-text-container {
-      width: 100%;
-      overflow: hidden;
-      text-align: center;
-      position: relative;
-      height: 20px;
-    }
-    .promo-text-slider {
-      display: flex;
-      flex-direction: column;
-      animation: slideText 9s infinite;
-      position: absolute;
-      top: 0; left: 0; width: 100%;
-    }
-    .promo-text-slider span {
-      height: 20px;
-      line-height: 20px;
-      display: block;
-    }
-    @keyframes slideText {
-      0%, 28% { transform: translateY(0); }
-      33%, 61% { transform: translateY(-20px); }
-      66%, 94% { transform: translateY(-40px); }
-      100% { transform: translateY(0); }
-    }
-
-    /* Imagem do Produto */
-    .product-image-wrapper {
-      width: 100%;
-      padding: 20px;
-      text-align: center;
-      background: #fff;
-      border-bottom: 1px solid #f0f0f0;
-    }
-    .product-image-wrapper img {
-      max-width: 100%;
-      height: auto;
-      max-height: 350px;
-      object-fit: contain;
-    }
-
-    /* Conteúdo do Card */
-    .product-info {
-      padding: 20px;
-    }
-    
-    .product-title {
-      font-size: 18px;
-      font-weight: 700;
-      color: #222;
-      margin: 0 0 10px 0;
-      line-height: 1.2;
-    }
-
-    .rating {
-      display: flex;
-      align-items: center;
-      font-size: 14px;
-      color: #ff9800;
-      margin-bottom: 15px;
-    }
-    .rating span { color: #777; margin-left: 5px; font-size: 12px; }
-
-    .features-list {
-      list-style: none;
-      padding: 0;
-      margin: 0 0 15px 0;
-      font-size: 14px;
-      color: #555;
-    }
-    .features-list li {
-      margin-bottom: 6px;
-      position: relative;
-      padding-left: 12px;
-    }
-    .features-list li::before {
-      content: "•";
-      color: #999;
-      position: absolute;
-      left: 0;
-    }
-
-    .price-old {
-      font-size: 14px;
-      color: #777;
-      text-decoration: line-through;
-      margin-bottom: 2px;
-    }
-    .price-new-row {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-bottom: 5px;
-    }
-    .price-new {
-      font-size: 28px;
-      font-weight: 800;
-      color: #2025b6;
-    }
-    .price-new span {
-      font-size: 14px;
-      font-weight: normal;
-      color: #555;
-    }
-    .installments {
-      font-size: 13px;
-      color: #555;
-      margin-bottom: 15px;
-    }
-
-    /* --- BOTÃO ADICIONAR ESTILO METÁLICO --- */
-    .add-to-cart-btn {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      width: 100%;
-      /* Degradê metálico: cinza claro (reflexo), preto (fundo) e cinza escuro (sombra) */
-      background: linear-gradient(180deg, #4a4a4a 0%, #222222 20%, #050505 80%, #1a1a1a 100%);
-      color: #fff;
-      text-decoration: none;
-      padding: 15px;
-      border-radius: 8px;
-      font-size: 16px;
-      font-weight: 700;
-      border: 3px solid #ffffff; /* Borda branca */
-      transition: all 0.3s ease;
-      /* Sombras para dar o efeito de metal polido e brilho */
       box-shadow: 
-        0 0 20px rgba(255, 255, 255, 0.3), /* Brilho externo suave */
-        inset 0 1px 2px rgba(255, 255, 255, 0.8), /* Reflexo superior (tipo aço escovado) */
-        inset 0 -2px 5px rgba(0, 0, 0, 0.8), /* Sombra inferior (profundidade) */
-        0 8px 15px rgba(0,0,0,0.5); /* Sombra projetada */
-      text-shadow: 0 1px 2px rgba(0,0,0,1);
-      position: relative;
-      overflow: hidden;
+        0 0 40px rgba(150, 180, 255, 1), 
+        0 0 80px rgba(32, 37, 182, 1), 
+        inset 0 0 30px rgba(255, 255, 255, 1), 
+        0 8px 20px rgba(0,0,0,0.4);
     }
-
-    /* Efeito de brilho passando (metálico) */
-    .add-to-cart-btn::before {
-      content: '';
-      position: absolute;
-      top: 0; left: -100%;
-      width: 50%; height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-      transform: skewX(-20deg);
-      animation: metalShine 3s infinite;
-    }
-
-    @keyframes metalShine {
-      0% { left: -100%; }
-      50%, 100% { left: 200%; }
-    }
-
-    .add-to-cart-btn:hover {
-      /* Brilho intensificado no hover */
-      background: linear-gradient(180deg, #666 0%, #333 20%, #111 80%, #222 100%);
-      transform: scale(1.02);
-      box-shadow: 
-        0 0 30px rgba(255, 255, 255, 0.6), 
-        inset 0 1px 3px rgba(255, 255, 255, 1), 
-        inset 0 -2px 5px rgba(0, 0, 0, 0.9),
-        0 8px 20px rgba(0,0,0,0.6);
-    }
-    /* --- FIM DO BOTÃO ADICIONAR --- */
-
-    /* --- FIM DO CARD DE PRODUTO --- */
 
     .categories-panel {
       width: min(92%, 1120px); margin: 0 auto; background: white;
@@ -330,54 +151,128 @@
     }
 
     .categories-panel h2 {
-      text-align: center; font-size: clamp(1.35rem, 3vw, 2rem); line-height: 1.1; margin: 0 auto 28px; font-weight: 900;
-      background: linear-gradient(135deg, #050617 0%, #2025b6 50%, #10147f 100%); color: #ffffff;
-      padding: 18px 20px; border-radius: 16px; box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25), inset 0 0 10px rgba(255,255,255,0.2);
-      text-shadow: 0 2px 4px rgba(0,0,0,0.8); width: 100%; max-width: 1000px; border: 2px solid #3b4bff;
+      text-align: center; 
+      font-size: clamp(1.35rem, 3vw, 2rem);
+      line-height: 1.1; 
+      margin: 0 auto 28px; 
+      font-weight: 900;
+      background: linear-gradient(135deg, #050617 0%, #2025b6 50%, #10147f 100%);
+      color: #ffffff;
+      padding: 18px 20px;
+      border-radius: 16px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25), inset 0 0 10px rgba(255,255,255,0.2);
+      text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+      width: 100%; 
+      max-width: 1000px; 
+      border: 2px solid #3b4bff;
     }
 
-    .category-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 26px 16px; }
-    .category { min-width: 0; text-align: center; text-decoration: none; display: flex; flex-direction: column; align-items: center; gap: 10px; font-weight: 800; font-size: clamp(.85rem, 1.5vw, 1rem); }
+    .category-grid {
+      display: grid; grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 26px 16px;
+    }
+    .category {
+      min-width: 0; text-align: center; text-decoration: none;
+      display: flex; flex-direction: column; align-items: center; gap: 10px;
+      font-weight: 800; font-size: clamp(.85rem, 1.5vw, 1rem);
+    }
     .category-circle {
-      width: min(100%, 170px); aspect-ratio: 1 / 1; border-radius: 50%; border: 2px solid #252525; outline: 5px solid #dedede;
-      background: linear-gradient(145deg,#f8f8f8,#d4d4d4); display: flex; align-items: center; justify-content: center;
-      font-size: clamp(2.2rem, 5vw, 4.1rem); overflow: hidden; transition: transform .18s, outline-color .18s;
+      width: min(100%, 170px); aspect-ratio: 1 / 1; border-radius: 50%;
+      border: 2px solid #252525; outline: 5px solid #dedede;
+      background: linear-gradient(145deg,#f8f8f8,#d4d4d4);
+      display: flex; align-items: center; justify-content: center;
+      font-size: clamp(2.2rem, 5vw, 4.1rem);
+      overflow: hidden; transition: transform .18s, outline-color .18s;
     }
     .category:hover .category-circle { transform: scale(1.035); outline-color: #aabaff; }
     .category-circle img { width: 100%; height: 100%; object-fit: contain; padding: 8px; }
 
     .all-button {
-      display: block; margin: 30px auto 0; width: 100%; padding: 14px 16px; border: 3px solid #ffffff; border-radius: 999px;
-      color: #fff; background: linear-gradient(180deg, #2025b6 0%, #080a3d 100%); text-align: center; text-decoration: none; 
-      font-size: 15px; font-weight: 900; text-transform: uppercase; letter-spacing: 1px; text-shadow: 0 2px 4px rgba(0,0,0,0.6);
-      transition: all .2s ease; box-shadow: 0 0 15px rgba(32, 37, 182, 0.9), 0 0 30px rgba(32, 37, 182, 0.6), inset 0 0 15px rgba(255, 255, 255, 0.5), 0 5px 15px rgba(0,0,0,0.3);
+      display: block; 
+      margin: 30px auto 0; 
+      width: 100%;
+      padding: 14px 16px; 
+      border: 3px solid #ffffff;
+      border-radius: 999px;
+      color: #fff; 
+      background: linear-gradient(180deg, #2025b6 0%, #080a3d 100%);
+      text-align: center;
+      text-decoration: none; 
+      font-size: 15px; 
+      font-weight: 900; 
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.6);
+      transition: all .2s ease;
+      box-shadow: 
+        0 0 15px rgba(32, 37, 182, 0.9), 
+        0 0 30px rgba(32, 37, 182, 0.6), 
+        inset 0 0 15px rgba(255, 255, 255, 0.5),
+        0 5px 15px rgba(0,0,0,0.3);
       animation: pulseGlowAll 1.5s infinite alternate;
     }
 
     @keyframes pulseGlowAll {
-      0% { box-shadow: 0 0 10px rgba(32, 37, 182, 0.7), 0 0 20px rgba(32, 37, 182, 0.4), inset 0 0 8px rgba(255, 255, 255, 0.3), 0 5px 15px rgba(0,0,0,0.3); }
-      100% { box-shadow: 0 0 25px rgba(32, 37, 182, 1), 0 0 50px rgba(32, 37, 182, 0.8), inset 0 0 20px rgba(255, 255, 255, 0.8), 0 5px 15px rgba(0,0,0,0.3); }
+      0% { 
+        box-shadow: 
+          0 0 10px rgba(32, 37, 182, 0.7), 
+          0 0 20px rgba(32, 37, 182, 0.4), 
+          inset 0 0 8px rgba(255, 255, 255, 0.3), 
+          0 5px 15px rgba(0,0,0,0.3); 
+      }
+      100% { 
+        box-shadow: 
+          0 0 25px rgba(32, 37, 182, 1), 
+          0 0 50px rgba(32, 37, 182, 0.8), 
+          inset 0 0 20px rgba(255, 255, 255, 0.8), 
+          0 5px 15px rgba(0,0,0,0.3); 
+      }
     }
 
-    .all-button:hover { background: linear-gradient(180deg, #3b4bff 0%, #10147f 100%); transform: scale(1.02); animation: none; box-shadow: 0 0 30px rgba(100, 150, 255, 1), 0 0 60px rgba(32, 37, 182, 1), inset 0 0 25px rgba(255, 255, 255, 0.9); }
+    .all-button:hover { 
+      background: linear-gradient(180deg, #3b4bff 0%, #10147f 100%); 
+      transform: scale(1.02);
+      animation: none;
+      box-shadow: 
+        0 0 30px rgba(100, 150, 255, 1), 
+        0 0 60px rgba(32, 37, 182, 1), 
+        inset 0 0 25px rgba(255, 255, 255, 0.9);
+    }
 
-    .about { max-width: 980px; margin: 64px auto 22px; padding: 0 20px; text-align: center; color: #333; font-size: 14px; }
+    .about {
+      max-width: 980px; margin: 64px auto 22px; padding: 0 20px;
+      text-align: center; color: #333; font-size: 14px;
+    }
     .credit { font-size: 12px; color: #555; margin-bottom: 16px; }
     .about p { margin: 0 0 10px; }
-    .audio-placeholder { display: block; width: min(94%, 850px); margin: 20px auto 24px; font-size: 13px; color: #555; text-align: center; }
-    .social-link { display: flex; align-items: center; justify-content: center; width: min(82%, 760px); min-height: 105px; margin: 18px auto; border-radius: 40px; color: white; text-decoration: none; font-weight: 700; box-shadow: 0 2px 6px rgba(0,0,0,.12); }
-    .instagram { background: linear-gradient(35deg,#ffb52f 0%,#ff2c82 45%,#b51fe1 70%,#304dff 100%); font-family: Georgia, serif; font-size: clamp(2rem, 6vw, 4.2rem); font-style: italic; letter-spacing: -2px; }
+    .audio-placeholder {
+      display: block; width: min(94%, 850px); margin: 20px auto 24px;
+      font-size: 13px; color: #555; text-align: center;
+    }
+    .social-link {
+      display: flex; align-items: center; justify-content: center;
+      width: min(82%, 760px); min-height: 105px; margin: 18px auto;
+      border-radius: 40px; color: white; text-decoration: none; font-weight: 700;
+      box-shadow: 0 2px 6px rgba(0,0,0,.12);
+    }
+    .instagram {
+      background: linear-gradient(35deg,#ffb52f 0%,#ff2c82 45%,#b51fe1 70%,#304dff 100%);
+      font-family: Georgia, serif; font-size: clamp(2rem, 6vw, 4.2rem);
+      font-style: italic; letter-spacing: -2px;
+    }
     .instagram .camera { font-family: Arial,sans-serif; font-size: 1.05em; margin-right: 15px; font-style: normal; }
-    .whatsapp { min-height: 48px; width: min(90%, 850px); border: 2px solid white; outline: 1px solid #b8b8b8; border-radius: 999px; background: #00c83b; font-size: 14px; box-shadow: var(--shadow); }
+    .whatsapp {
+      min-height: 48px; width: min(90%, 850px); border: 2px solid white;
+      outline: 1px solid #b8b8b8; border-radius: 999px; background: #00c83b;
+      font-size: 14px; box-shadow: var(--shadow);
+    }
     .bottom-space { width: min(90%, 850px); height: 32px; margin: 16px auto 30px; border: 1px dashed #bbb; }
     footer { padding-bottom: 1px; }
-    
     @media (min-width: 1000px) {
       .main-image { max-height: 850px; }
       .site-header { grid-template-columns: 180px minmax(0,1fr); }
       .brand-mark { width: 118px; height: 118px; }
     }
-    
     @media (max-width: 650px) {
       .site-header { grid-template-columns: 94px minmax(0,1fr); min-height: 94px; }
       .brand { padding: 7px; }
@@ -388,12 +283,6 @@
       .hero-title { padding: 12px 9px; }
       .hero-title h1 { font-size: clamp(1.25rem, 5vw, 2rem); }
       .primary-action { margin: 18px auto 22px; padding: 14px 8px; font-size: 16px; letter-spacing: 1px; }
-      
-      .product-card { margin-top: -10px; margin-bottom: 30px; }
-      .product-image-wrapper img { max-height: 250px; }
-      .product-title { font-size: 16px; }
-      .price-new { font-size: 24px; }
-      
       .categories-panel { width: 92%; padding: 22px 14px 20px; border-radius: 24px; }
       .categories-panel h2 { margin-bottom: 24px; font-size: 1.25rem; padding: 15px 10px; }
       .category-grid { grid-template-columns: repeat(2, minmax(0,1fr)); gap: 25px 12px; }
@@ -406,7 +295,6 @@
       .instagram .camera { margin-right: 8px; }
       .whatsapp { min-height: 43px; font-size: 12px; }
     }
-    
     @media (max-width: 360px) {
       .site-header { grid-template-columns: 78px minmax(0,1fr); }
       .brand-mark { width: 64px; height: 64px; }
@@ -430,60 +318,6 @@
     </a>
     
     <a class="primary-action" href="https://s.shopee.com.br/4qGQts9W9M" target="_blank" rel="noopener noreferrer">ADQUIRIR KIT PANELAS</a>
-
-    <!-- ========================================== -->
-    <!-- CARD DO PRODUTO ATUALIZADO                 -->
-    <!-- ========================================== -->
-    <div class="product-card">
-      
-      <!-- Letreiro Animado -->
-      <div class="promo-banner">
-        <span class="arrow">&lt;</span>
-        <div class="promo-text-container">
-          <div class="promo-text-slider">
-            <span>Frete Grátis com Cupom</span>
-            <span>Grande Oferta</span>
-            <span>Kit Panelas</span>
-          </div>
-        </div>
-        <span class="arrow">&gt;</span>
-      </div>
-
-      <!-- Imagem do Produto -->
-      <div class="product-image-wrapper">
-        <img src="kit-panelas.jpg" alt="Conjunto Kit Jogo Panela Creme E Escorredor De Pratos Inox">
-      </div>
-
-      <!-- Informações do Produto -->
-      <div class="product-info">
-        <h3 class="product-title">Conjunto Kit Jogo Panela Creme E Escorredor De Pratos Inox</h3>
-        
-        <div class="rating">
-          ★★★★★ <span>(56)</span>
-        </div>
-        
-        <ul class="features-list">
-          <li>5 Panelas: Panela 16cm e 18cm, Caçarola 18cm, Fervedor 14cm e Frigideira 20cm.</li>
-          <li>3 Utensílios: Espátula, pegador de massa e colher grande.</li>
-          <li>Escorredor Mak Inox: Espaço para 12 pratos + porta-talher incluso.</li>
-          <li><strong>Medidas do Escorredor:</strong> Comprimento 33cm | Largura 29cm | Altura 30cm</li>
-        </ul>
-
-        <div class="price-new-row">
-          <span class="price-new">R$ 234,65</span>
-          <span>no Pix com cupom</span>
-        </div>
-        <div class="installments">ou R$ 259,99 sem cupom em outros métodos de pagamento</div>
-
-        <!-- BOTÃO ADICIONAR COM EFEITO METÁLICO -->
-        <a class="add-to-cart-btn action-add" href="#" target="_blank" rel="noopener noreferrer">
-          🛒 Adicionar
-        </a>
-      </div>
-    </div>
-    <!-- ========================================== -->
-    <!-- FIM DO CARD DO PRODUTO                     -->
-    <!-- ========================================== -->
 
     <section class="categories-panel" id="categorias" aria-labelledby="categories-title">
       
@@ -529,25 +363,21 @@
     });
   </script>
 
-  <!-- ✅ RASTREAMENTO DE CLIQUES -->
+  <!-- ============================================================ -->
+  <!-- ✅ RASTREAMENTO DE CLIQUE NO BOTÃO - INÍCIO -->
+  <!-- ============================================================ -->
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-      // Rastreamento do Botão Principal
       var botaoKitPanelas = document.querySelector('.primary-action');
       if (botaoKitPanelas) {
         botaoKitPanelas.addEventListener('click', function() {
           fbq('track', 'Lead');
         });
       }
-
-      // Rastreamento do Botão Adicionar (Card)
-      var botaoAdicionar = document.querySelector('.action-add');
-      if (botaoAdicionar) {
-        botaoAdicionar.addEventListener('click', function() {
-          fbq('track', 'Lead');
-        });
-      }
     });
   </script>
+  <!-- ============================================================ -->
+  <!-- ✅ RASTREAMENTO DE CLIQUE NO BOTÃO - FIM -->
+  <!-- ============================================================ -->
 </body>
 </html>
