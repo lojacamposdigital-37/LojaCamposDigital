@@ -138,22 +138,22 @@
       flex-direction: column;
     }
 
-    /* Banner animado (Letreiro) AGORA PRETO COM LETRAS BRANCAS */
+    /* Banner animado (Letreiro) PRETO */
     .promo-banner {
-      background: #000000; /* Fundo Preto */
+      background: #000000;
       display: flex;
       align-items: center;
       justify-content: space-between;
       padding: 8px 15px;
       font-weight: 700;
       font-size: 13px;
-      color: #ffffff; /* Texto Branco */
+      color: #ffffff;
       overflow: hidden;
       position: relative;
-      border-bottom: 1px solid #333; /* Linha sutil para separar da imagem */
+      border-bottom: 1px solid #333;
     }
     .promo-banner .arrow {
-      color: #ffffff; /* Setas brancas */
+      color: #ffffff;
       font-size: 16px;
       font-weight: bold;
     }
@@ -377,7 +377,28 @@
     .about { max-width: 980px; margin: 64px auto 22px; padding: 0 20px; text-align: center; color: #333; font-size: 14px; }
     .credit { font-size: 12px; color: #555; margin-bottom: 16px; }
     .about p { margin: 0 0 10px; }
-    .audio-placeholder { display: block; width: min(94%, 850px); margin: 20px auto 24px; font-size: 13px; color: #555; text-align: center; }
+
+    /* --- ESTILO DO PLAYER DE ÁUDIO --- */
+    .audio-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: min(94%, 850px);
+      margin: 20px auto 24px;
+      padding: 15px;
+      background: #ffffff;
+      border-radius: 12px;
+      border: 1px solid #e0e0e0;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+    .audio-container p {
+      margin: 0 0 10px 0;
+      color: #333;
+      font-size: 14px;
+    }
+    /* --------------------------------- */
+
     .social-link { display: flex; align-items: center; justify-content: center; width: min(82%, 760px); min-height: 105px; margin: 18px auto; border-radius: 40px; color: white; text-decoration: none; font-weight: 700; box-shadow: 0 2px 6px rgba(0,0,0,.12); }
     .instagram { background: linear-gradient(35deg,#ffb52f 0%,#ff2c82 45%,#b51fe1 70%,#304dff 100%); font-family: Georgia, serif; font-size: clamp(2rem, 6vw, 4.2rem); font-style: italic; letter-spacing: -2px; }
     .instagram .camera { font-family: Arial,sans-serif; font-size: 1.05em; margin-right: 15px; font-style: normal; }
@@ -404,15 +425,8 @@
       
       .product-card { margin-top: -10px; margin-bottom: 30px; }
       
-      .product-image-wrapper { 
-        padding: 10px;
-      }
-      .product-image-wrapper img { 
-        max-height: none;
-        width: 100%;      
-        height: auto;     
-        transform: scale(1.05); 
-      }
+      .product-image-wrapper { padding: 10px; }
+      .product-image-wrapper img { max-height: none; width: 100%; height: auto; transform: scale(1.05); }
       
       .product-title { font-size: 16px; }
       .price-new { font-size: 24px; }
@@ -465,9 +479,9 @@
         <span class="arrow">&lt;</span>
         <div class="promo-text-container">
           <div class="promo-text-slider">
-            <span>FRETE GRÁTIS COM CUPOM</span>
-            <span>GRANDE OFERTA</span>
-            <span>KIT PANELAS</span>
+            <span>Frete Grátis com Cupom</span>
+            <span>Grande Oferta</span>
+            <span>Kit Panelas</span>
           </div>
         </div>
         <span class="arrow">&gt;</span>
@@ -505,7 +519,7 @@
 
         <!-- BOTÃO ADICIONAR COM LINK CORRIGIDO -->
         <a class="add-to-cart-btn action-add" href="https://s.shopee.com.br/4qGQts9W9M" target="_blank" rel="noopener noreferrer">
-          🛒 ADQUIRA COM FRETE GRÁTIS
+          🛒 Adicionar
         </a>
       </div>
     </div>
@@ -541,7 +555,15 @@
       <p>Isso significa que o nosso trabalho é <strong>garimpar e indicar as melhores ofertas</strong> do mercado para facilitar a sua escolha. Quando clica nos botões, você será direcionado para os sites da <strong>Shopee ou da Magalu</strong>. Todo o processo de separação, faturamento e entrega é realizado com a segurança e a garantia oficial da Shopee ou da Magalu. Compre com total tranquilidade e receba direto na sua casa!</p>
     </section>
 
-    <div class="audio-placeholder">Espaço reservado para o áudio/vídeo institucional (arquivo ainda não enviado).</div>
+    <!-- PLAYER DE ÁUDIO AQUI -->
+    <div class="audio-container">
+      <p><strong>🎵 Ouça a nossa mensagem:</strong></p>
+      <audio controls style="width: 100%; max-width: 500px; outline: none;">
+        <source src="musica.mp3" type="audio/mpeg">
+        Seu navegador não suporta áudio.
+      </audio>
+    </div>
+    <!-- FIM DO PLAYER -->
 
     <a class="social-link instagram" href="https://www.instagram.com/loja.campos_digital?xtok=mwjQCNOXm3e0AxP0zW==" aria-label="Instagram da Loja Campos Digital" target="_blank" rel="noopener noreferrer">
       <span class="camera" aria-hidden="true">◎</span><span>Instagram</span>
